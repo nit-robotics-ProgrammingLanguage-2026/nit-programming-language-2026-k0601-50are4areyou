@@ -3,7 +3,16 @@
 int main(void)
 {
     int n;
+    int sum = 0;
     scanf("%d", &n);
-    /* TODO: n が負なら NG、そうでなければ 1+2+...+n を for 文で計算して表示 */
+    if ( n< 0){
+        printf("NG");
+    }
+    else {
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        printf("%d", sum);
+    }
     return 0;
 }
